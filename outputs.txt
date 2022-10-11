@@ -1,0 +1,896 @@
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": [
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "09:30"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "09:30"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "A60"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "MAD",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "AC",
+                "FlightNumber": "9180"
+              },
+              {
+                "AirlineID": "AV",
+                "FlightNumber": "6513"
+              },
+              {
+                "AirlineID": "ET",
+                "FlightNumber": "1569"
+              },
+              {
+                "AirlineID": "OS",
+                "FlightNumber": "7455"
+              },
+              {
+                "AirlineID": "SQ",
+                "FlightNumber": "2062"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9358"
+              },
+              {
+                "AirlineID": "WY",
+                "FlightNumber": "5512"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1112"
+          },
+          "Equipment": {
+            "AircraftCode": "321"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:20"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:20"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "A69"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "MAD",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "15:55"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "15:55"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "AC",
+                "FlightNumber": "9284"
+              },
+              {
+                "AirlineID": "OS",
+                "FlightNumber": "7461"
+              },
+              {
+                "AirlineID": "SK",
+                "FlightNumber": "3370"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9229"
+              },
+              {
+                "AirlineID": "WY",
+                "FlightNumber": "5504"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1114"
+          },
+          "Equipment": {
+            "AircraftCode": "32A"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2022-10-12T12:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2022-10-12T08:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2022-10-12T16:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 2
+    }
+  }
+}
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": [
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:00"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:00"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "B20"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:40"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:40"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "A3",
+                "FlightNumber": "1615"
+              },
+              {
+                "AirlineID": "OU",
+                "FlightNumber": "5482"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "8815"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "906"
+          },
+          "Equipment": {
+            "AircraftCode": "32N"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "MUC",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "11:50"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "11:50"
+            },
+            "Terminal": {
+              "Name": "2",
+              "Gate": "L08"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:50"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:50"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "A3",
+                "FlightNumber": "1604"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9440"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "2474"
+          },
+          "Equipment": {
+            "AircraftCode": "32N"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:00"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:00"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "AC",
+                "FlightNumber": "6837"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9760"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LX",
+            "FlightNumber": "332"
+          },
+          "Equipment": {
+            "AircraftCode": "223"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "GVA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:55"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:55"
+            },
+            "Terminal": {
+              "Name": "1"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": {
+              "AirlineID": "UA",
+              "FlightNumber": "9740"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LX",
+            "FlightNumber": "354"
+          },
+          "Equipment": {
+            "AircraftCode": "221"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "VIE",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:55"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:55"
+            },
+            "Terminal": {
+              "Name": "3"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "14:20"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "14:20"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": {
+              "AirlineID": "AC",
+              "FlightNumber": "6191"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "OS",
+            "FlightNumber": "461"
+          },
+          "Equipment": {
+            "AircraftCode": "320"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "15:00"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "15:00"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "B27"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "15:40"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "15:40"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": {
+              "AirlineID": "UA",
+              "FlightNumber": "9100"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "910"
+          },
+          "Equipment": {
+            "AircraftCode": "32N"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "MUC",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "14:45"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "14:45"
+            },
+            "Terminal": {
+              "Name": "2",
+              "Gate": "L10"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "LHR",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "15:45"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "15:45"
+            },
+            "Terminal": {
+              "Name": "2"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": {
+              "AirlineID": "UA",
+              "FlightNumber": "9175"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "2476"
+          },
+          "Equipment": {
+            "AircraftCode": "32N"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LHR/2022-10-12T12:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LHR/2022-10-12T08:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LHR/2022-10-12T16:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 7
+    }
+  }
+}
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": [
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:25"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:25"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "A16"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "CDG",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Terminal": {
+              "Name": "2B"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "A3",
+                "FlightNumber": "1450"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9031"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1034"
+          },
+          "Equipment": {
+            "AircraftCode": "321"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "MUC",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:05"
+            },
+            "Terminal": {
+              "Name": "2",
+              "Gate": "K16"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "CDG",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:40"
+            },
+            "Terminal": {
+              "Name": "2B"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "A3",
+                "FlightNumber": "1442"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9103"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "2230"
+          },
+          "Equipment": {
+            "AircraftCode": "319"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "12:30"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "12:30"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "CDG",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:50"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:50"
+            },
+            "Terminal": {
+              "Name": "2B"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "LA",
+                "FlightNumber": "8791"
+              },
+              {
+                "AirlineID": "UA",
+                "FlightNumber": "9769"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LX",
+            "FlightNumber": "638"
+          },
+          "Equipment": {
+            "AircraftCode": "221"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "VIE",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "13:05"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "13:05"
+            },
+            "Terminal": {
+              "Name": "3"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "CDG",
+            "Scheduled": {
+              "Date": "2022-10-12",
+              "Time": "15:05"
+            },
+            "Actual": {
+              "Date": "2022-10-12",
+              "Time": "15:05"
+            },
+            "Terminal": {
+              "Name": "2B"
+            },
+            "Status": {
+              "Code": "OT",
+              "Description": "Flight On Time"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "OS",
+            "FlightNumber": "415"
+          },
+          "Equipment": {
+            "AircraftCode": "320"
+          },
+          "Status": {
+            "Code": "OT",
+            "Description": "Flight On Time"
+          }
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2022-10-12T12:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2022-10-12T08:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2022-10-12T16:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 4
+    }
+  }
+}
+{
+  "ProcessingErrors": {
+    "ProcessingError": {
+      "@RetryIndicator": false,
+      "Type": "ResourceNotFound",
+      "Code": "2401",
+      "Description": "Invalid flight arrival status request (semantically incorrect). Example: /flightstatus/arrivals/FRA/2014-12-03T10:00/2014-12-03T12:00.",
+      "InfoURL": "not supported yet: http://api.lufthansa.com/errorcodes/{processingError.Code}"
+    }
+  }
+}
