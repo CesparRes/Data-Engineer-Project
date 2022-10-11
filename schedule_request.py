@@ -2,6 +2,7 @@ import requests
 import json
 import sys
 
+## Argument 1 is the bearer token
 headers = {
     "accept": "application/json",
     "Authorization": "Bearer " + sys.argv[1],
