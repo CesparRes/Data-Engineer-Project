@@ -11,3 +11,6 @@ List flights between airports? What flights are available between select airport
 Using MongDb - update daily but remain within the API limits (5 per second, 1000 per hour)
 
 
+Project files:
+
+check_request.py - this is an external library function which simply makes a request to ensure bearer token is valid. If not, it returns the new bearer
