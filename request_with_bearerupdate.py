@@ -1,6 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import configparser
+from check_request import check_request
 import json
 import sys
 import pprint
@@ -9,42 +10,8 @@ import pprint
 conf = configparser.ConfigParser()
 conf.read("config.ini")
 
-bearer = conf["lufthansa"]["bearer"]
-
-### lets test the current bearer token is working first
-try:
-    headers = {
-        "accept": "application/json",
-        "Authorization": "Bearer " + conf["lufthansa"]["bearer"],
-    }
-
-    response = requests.get(
-        "https://api.lufthansa.com/v1/mds-references/airports/FRA", headers=headers
-    )
-
-    ### if the response is 401 (not authorised) we'll request a new token
-    if response.status_code == 401:
-        print("401 failure - getting new auth token")
-        data = {
-            "client_id": conf["lufthansa"]["clientId"],
-            "client_secret": conf["lufthansa"]["clientSecret"],
-            "grant_type": "client_credentials",
-        }
-        response = requests.post("https://api.lufthansa.com/v1/oauth/token", data=data)
-
-        ## probably this can be done more tidily, but essentially we turn the response into readable JSON
-        temp_json = json.dumps(response.json())
-        temp_resp = json.loads(temp_json)
-
-        ## save the received bearer token into the bearer variable, and update config.ini with the updated bearer
-        bearer = temp_resp["access_token"]
-        conf["lufthansa"]["bearer"] = bearer
-        with open("config.ini", "w") as configfile:
-            conf.write(configfile)
-
-## failure code
-except:
-    print(json.dumps(response))
+## function that checks the bearer token is valid, if it's not valid, the new bearer token is returned and added to the config file
+bearer = check_request(conf["lufthansa"]["bearer"])
 
 ## now the real request
 try:
@@ -60,6 +27,7 @@ try:
         "daysOfOperation": "1234567",
         "timeMode": "UTC",
         "destination": "LHR",
+        "limit": "2",
     }
     query_response = requests.get(
         "https://api.lufthansa.com/v1/flight-schedules/flightschedules/passenger",

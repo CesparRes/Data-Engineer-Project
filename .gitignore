@@ -1,3 +1,4 @@
 config.ini
 ~$*
 outputs.txt
+__pycache__
