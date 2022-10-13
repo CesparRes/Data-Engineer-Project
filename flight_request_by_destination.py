@@ -2,12 +2,20 @@ import requests
 import json
 import sys
 import pprint
+import configparser
+from check_request import check_request
 
+### load config.ini file - holds the clientid and clientsecret and last bearer token for lufthansa API
+conf = configparser.ConfigParser()
+conf.read("config.ini")
+
+## function that checks the bearer token is valid, if it's not valid, the new bearer token is returned and added to the config file
+bearer = check_request(conf["lufthansa"]["bearer"])
 
 ## argument is bearer token
 headers = {
     "accept": "application/json",
-    "Authorization": "Bearer " + sys.argv[1],
+    "Authorization": "Bearer " + bearer,
 }
 
 # Argument 2 is destination country
@@ -18,7 +26,7 @@ params = {
     "endDate": "07OCT22",
     "daysOfOperation": "1234567",
     "timeMode": "UTC",
-    "destination": sys.argv[2],
+    "destination": sys.argv[1],
 }
 
 # return passenger flight schedules of flights to argument 2 country on selected date
@@ -27,6 +35,4 @@ response = requests.get(
     params=params,
     headers=headers,
 )
-
-
 print(json.dumps(response.json()))
