@@ -24,7 +24,8 @@ IATA = ["MAD", "LHR", "CDG", "ORY", "MAN", "ABZ", "ATH"]
 times = ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"]
 
 # loop through the IATA codes and append the response to an array
-# for the test we're only using 1 specific time and date - 12-10-2022 12:00
+# for the test we're using only a single date, but looping through
+# the 4 hour "windows" covering the day
 for code in IATA:
     for time in times:
         response = requests.get(
