@@ -1,9 +1,21 @@
+#%%
 import requests
 import json
 import sys
+import pandas as pd
 import configparser
 from check_request import check_request
 
+## read the iata codes previously scraped
+iata_codes = pd.read_csv("iata_codes.csv")
+
+#%%
+## test with the french airport codes only
+france = iata_codes.loc[iata_codes["Country"] == "France"]
+
+IATA = france["IATA"]
+
+#%%
 ### load config.ini file - holds the clientid and clientsecret and last bearer token for lufthansa API
 conf = configparser.ConfigParser()
 conf.read("config.ini")
@@ -20,7 +32,7 @@ headers = {
 results = []
 
 ## arrays of arrival airports and 4 hour windows
-IATA = ["MAD", "LHR", "CDG", "ORY", "MAN", "ABZ", "ATH"]
+# IATA = ["MAD", "LHR", "CDG", "ORY", "MAN", "ABZ", "ATH"]
 times = ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"]
 
 # loop through the IATA codes and append the response to an array
