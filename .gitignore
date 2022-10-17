@@ -2,3 +2,5 @@ config.ini
 ~$*
 outputs.txt
 __pycache__
+*.code-workspace
+.gitignore
