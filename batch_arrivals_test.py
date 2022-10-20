@@ -2,6 +2,7 @@
 import requests
 import json
 import sys
+import os
 import pandas as pd
 import configparser
 from check_request import check_request
@@ -12,8 +13,14 @@ iata_codes = pd.read_csv("iata_codes.csv")
 #%%
 ## test with the french airport codes only
 france = iata_codes.loc[iata_codes["Country"] == "France"]
+spain = iata_codes.loc[iata_codes["Country"] == "Spain"]
+germany = iata_codes.loc[iata_codes["Country"] == "Germany"]
+italy = iata_codes.loc[iata_codes["Country"] == "Italy"]
+uk = iata_codes.loc[iata_codes["Country"] == "United Kingdom"]
 
-IATA = france["IATA"]
+IATA = [france["IATA"], spain["IATA"], germany["IATA"], italy["IATA"], uk["IATA"]]
+
+IATA = pd.concat(IATA)
 
 #%%
 ### load config.ini file - holds the clientid and clientsecret and last bearer token for lufthansa API
