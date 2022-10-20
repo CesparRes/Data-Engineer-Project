@@ -4,6 +4,7 @@ import json
 import sys
 import pandas as pd
 import configparser
+import time
 from check_request import check_request
 
 ## read the iata codes previously scraped
@@ -12,8 +13,14 @@ iata_codes = pd.read_csv("iata_codes.csv")
 #%%
 ## test with the french airport codes only
 france = iata_codes.loc[iata_codes["Country"] == "France"]
+spain = iata_codes.loc[iata_codes["Country"] == "Spain"]
+germany = iata_codes.loc[iata_codes["Country"] == "Germany"]
+italy = iata_codes.loc[iata_codes["Country"] == "Italy"]
+uk = iata_codes.loc[iata_codes["Country"] == "United Kingdom"]
 
-IATA = france["IATA"]
+IATA_grouped = [france["IATA"],spain["IATA"]] #,germany["IATA"],italy["IATA"],uk["IATA"]]
+
+IATA = pd.concat(IATA_grouped)
 
 #%%
 ### load config.ini file - holds the clientid and clientsecret and last bearer token for lufthansa API
@@ -39,14 +46,15 @@ times = ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"]
 # for the test we're using only a single date, but looping through
 # the 4 hour "windows" covering the day
 for code in IATA:
-    for time in times:
+    for dtime in times:
         response = requests.get(
             "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/"
             + code
-            + "/2022-10-12T"
-            + time,
+            + "/2022-10-20T"
+            + dtime,
             headers=headers,
         )
+        time.sleep(0.5)
         ## if there are no arrivals within a window, we get the resource not found error, so we want to filter these out of the response
         if "ResourceNotFound" not in response.text:
             results.append(response)
