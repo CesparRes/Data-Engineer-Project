@@ -62,4 +62,4 @@ for code in IATA:
 
 ## output the responses - can be piped to a file easily
 for result in results:
-    print(json.dumps(result.json()))
+    print(json.dumps(result.json(), ensure_ascii=True))

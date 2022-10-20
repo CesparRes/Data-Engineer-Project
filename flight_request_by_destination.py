@@ -35,4 +35,4 @@ response = requests.get(
     params=params,
     headers=headers,
 )
-print(json.dumps(response.json()))
+print(json.dumps(response.json(),ensure_ascii=True))
