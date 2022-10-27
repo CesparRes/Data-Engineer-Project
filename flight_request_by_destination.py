@@ -22,8 +22,8 @@ headers = {
 # for now we use fixed date (6-7 October 2022) - but this can be made argument too
 params = {
     "airlines": "LH",
-    "startDate": "06OCT22",
-    "endDate": "07OCT22",
+    "startDate": "20OCT22",
+    "endDate": "20OCT22",
     "daysOfOperation": "1234567",
     "timeMode": "UTC",
     "destination": "LHR",
@@ -35,4 +35,4 @@ response = requests.get(
     params=params,
     headers=headers,
 )
-print(json.dumps(response.json()))
+print(json.dumps(response.json(),ensure_ascii=True))
