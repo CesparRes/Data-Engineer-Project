@@ -1,0 +1,406 @@
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": {
+        "Departure": {
+          "AirportCode": "MUC",
+          "Scheduled": {
+            "Date": "2022-10-24",
+            "Time": "19:55"
+          },
+          "Actual": {
+            "Date": "2022-10-24",
+            "Time": "20:05"
+          },
+          "Terminal": {
+            "Name": "2",
+            "Gate": "G33"
+          },
+          "Status": {
+            "Code": "DP",
+            "Description": "Flight Departed"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "BLQ",
+          "Scheduled": {
+            "Date": "2022-10-24",
+            "Time": "21:00"
+          },
+          "Actual": {
+            "Date": "2022-10-24",
+            "Time": "21:05"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        },
+        "MarketingCarrierList": {
+          "MarketingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "9486"
+          }
+        },
+        "OperatingCarrier": {
+          "AirlineID": "EN",
+          "FlightNumber": "8244"
+        },
+        "Equipment": {
+          "AircraftCode": "E95"
+        },
+        "Status": {
+          "Code": "LD",
+          "Description": "Flight Landed"
+        }
+      }
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BLQ/2022-10-24T20:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BLQ/2022-10-24T16:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BLQ/2022-10-25T00:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 1
+    }
+  }
+}
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": {
+        "Departure": {
+          "AirportCode": "STR",
+          "Scheduled": {
+            "Date": "2022-10-24",
+            "Time": "17:55"
+          },
+          "Actual": {
+            "Date": "2022-10-24",
+            "Time": "18:01"
+          },
+          "Terminal": {
+            "Name": "1",
+            "Gate": "173"
+          },
+          "Status": {
+            "Code": "DP",
+            "Description": "Flight Departed"
+          }
+        },
+        "Arrival": {
+          "AirportCode": "CTA",
+          "Scheduled": {
+            "Date": "2022-10-24",
+            "Time": "20:10"
+          },
+          "Actual": {
+            "Date": "2022-10-24",
+            "Time": "20:20"
+          },
+          "Terminal": {
+            "Gate": "000"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        },
+        "OperatingCarrier": {
+          "AirlineID": "X8",
+          "FlightNumber": "2818"
+        },
+        "Equipment": {
+          "AircraftCode": "320"
+        },
+        "Status": {
+          "Code": "LD",
+          "Description": "Flight Landed"
+        }
+      }
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CTA/2022-10-24T20:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CTA/2022-10-24T16:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CTA/2022-10-25T00:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 1
+    }
+  }
+}
+{
+  "FlightInformation": {
+    "Flights": {
+      "Flight": [
+        {
+          "Departure": {
+            "AirportCode": "DUS",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "18:45"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "19:32"
+            },
+            "Terminal": {
+              "Gate": "A77"
+            },
+            "Status": {
+              "Code": "DP",
+              "Description": "Flight Departed"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "BHX",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "19:15"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "20:06"
+            },
+            "Status": {
+              "Code": "LD",
+              "Description": "Flight Landed"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "BT",
+            "FlightNumber": "9330"
+          },
+          "Equipment": {
+            "AircraftCode": "220"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "BRU",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "21:20"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "21:23"
+            },
+            "Status": {
+              "Code": "DP",
+              "Description": "Flight Departed"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "BHX",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "21:35"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "21:40"
+            },
+            "Status": {
+              "Code": "LD",
+              "Description": "Flight Landed"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "LH",
+                "FlightNumber": "5608"
+              },
+              {
+                "AirlineID": "TP",
+                "FlightNumber": "7458"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "SN",
+            "FlightNumber": "2049"
+          },
+          "Equipment": {
+            "AircraftCode": "319"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "FRA",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "21:50"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "21:56"
+            },
+            "Terminal": {
+              "Name": "1",
+              "Gate": "B25"
+            },
+            "Status": {
+              "Code": "DP",
+              "Description": "Flight Departed"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "BHX",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "22:25"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "22:32"
+            },
+            "Status": {
+              "Code": "LD",
+              "Description": "Flight Landed"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": [
+              {
+                "AirlineID": "NH",
+                "FlightNumber": "5867"
+              },
+              {
+                "AirlineID": "SQ",
+                "FlightNumber": "2144"
+              },
+              {
+                "AirlineID": "TP",
+                "FlightNumber": "7598"
+              }
+            ]
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "958"
+          },
+          "Equipment": {
+            "AircraftCode": "32A"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        },
+        {
+          "Departure": {
+            "AirportCode": "MUC",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "22:00"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "21:56"
+            },
+            "Terminal": {
+              "Name": "2",
+              "Gate": "H10"
+            },
+            "Status": {
+              "Code": "DP",
+              "Description": "Flight Departed"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "BHX",
+            "Scheduled": {
+              "Date": "2022-10-24",
+              "Time": "22:55"
+            },
+            "Actual": {
+              "Date": "2022-10-24",
+              "Time": "22:48"
+            },
+            "Status": {
+              "Code": "LD",
+              "Description": "Flight Landed"
+            }
+          },
+          "MarketingCarrierList": {
+            "MarketingCarrier": {
+              "AirlineID": "TP",
+              "FlightNumber": "7778"
+            }
+          },
+          "OperatingCarrier": {
+            "AirlineID": "CL",
+            "FlightNumber": "2512"
+          },
+          "Equipment": {
+            "AircraftCode": "319"
+          },
+          "Status": {
+            "Code": "LD",
+            "Description": "Flight Landed"
+          }
+        }
+      ]
+    },
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BHX/2022-10-24T20:00",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BHX/2022-10-24T16:00?offset=0&limit=20",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BHX/2022-10-25T00:00?offset=0&limit=20",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        }
+      ],
+      "TotalCount": 4
+    }
+  }
+}

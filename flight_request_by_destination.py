@@ -26,7 +26,7 @@ params = {
     "endDate": "07OCT22",
     "daysOfOperation": "1234567",
     "timeMode": "UTC",
-    "destination": sys.argv[1],
+    "destination": "LHR",
 }
 
 # return passenger flight schedules of flights to argument 2 country on selected date
