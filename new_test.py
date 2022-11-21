@@ -52,7 +52,7 @@ times = ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00"]
 ### note that we also have 3 "apps" with different bearers to use so we don't hit the 1k per hour limit
 
 
-def arrivals_request(IATA_list):
+async def arrivals_request(IATA_list):
 
     ## check which country's IATA list has been passed to the function, and then load the appropriate bearer token
     if IATA_list.reset_index(drop=True).equals(IATA_spain.reset_index(drop=True)):
@@ -74,7 +74,7 @@ def arrivals_request(IATA_list):
             response = requests.get(
                 "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/"
                 + code
-                + "/2022-10-26T"
+                + "/2022-11-17T"
                 + dtime,
                 headers=headers,
             )
@@ -89,7 +89,7 @@ def arrivals_request(IATA_list):
 
 
 async def main():
-    await asyncio.gather(arrivals_request(country) for country in IATA_countries)
+    await asyncio.gather(*[arrivals_request(country) for country in IATA_countries])
 
 
 asyncio.run(main())
