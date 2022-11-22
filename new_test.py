@@ -1,7 +1,6 @@
 #%%
 import requests
 import json
-import sys
 import pandas as pd
 import configparser
 import time
@@ -9,9 +8,16 @@ import asyncio
 from check_request import check_request
 from check_request_spain import check_request_spain
 from check_request_germany import check_request_germany
+from datetime import datetime, timedelta
 
 ## read the iata codes previously scraped
 iata_codes = pd.read_csv("iata_codes.csv")
+
+#%%
+
+## Quick code to retrieve yesterdays date and format it correctly for requests
+day_arg = datetime.today() - timedelta(days=1)
+day_arg = day_arg.strftime("/%Y-%m-%dT")
 
 #%%
 ## set up the IATA codes for each country into sub-dataframes
@@ -74,7 +80,7 @@ async def arrivals_request(IATA_list):
             response = requests.get(
                 "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/"
                 + code
-                + "/2022-11-17T"
+                + day_arg
                 + dtime,
                 headers=headers,
             )

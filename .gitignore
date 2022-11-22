@@ -1,6 +1,4 @@
-config.ini
-config_germany.ini
-config_spain.ini
+*.ini
 ~$*
 outputs.txt
 __pycache__
