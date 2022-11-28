@@ -1,23 +1,30 @@
 version: '3.9'
 services:
-  jupyter:
-    image: jupyter/minimal-notebook
-    container_name: my_jupyter_from_compose
+  lufthansa_db:
+    container_name: Lufthansa_db
+    image: cespar/lufthansa_db:latest
     networks:
-      - my_network_from_compose
-    volumes:
-      - .:/home/jovyan/work
+      - host
     ports:
-      - "8888:8888"
-  elasticsearch:
-    image: elasticsearch:7.2.0
-    container_name: my_es_from_compose
+      - 27017:27017
+
+  fastapi:
+    container_name: Lufthansa_api
+    image: cespar/lufthansa_api:latest
     networks:
-      - my_network_from_compose
-    environment:
-      discovery.type: single-node
+      - host
     ports:
-      - "9200:9200"
-      - "9300:9300"
+      - 8000:8000
+    depends_on:
+      - "lufthansa_db"
+  lufthansa_dash:
+    container_name: lufthansa_dash
+    image: cespar/lufthansa_dash:latest
+    networks:
+      - host
+    ports:
+      - 5000:5000
+    depends_on:
+      - "lufthansa_db"
 networks:
-   my_network_from_compose:
+  host:

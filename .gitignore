@@ -4,3 +4,5 @@ outputs.txt
 __pycache__
 *.code-workspace
 .gitignore
+all_airports.txt
+airports_parsed.txt

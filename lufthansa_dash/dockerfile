@@ -1,0 +1,8 @@
+FROM debian:latest
+RUN apt-get update && apt-get install python3-pip -y && pip install pandas && pip install dash
+RUN pip install pymongo && pip install configparser && pip install numpy
+ADD iata_codes_latlon.csv /files/iata_codes_latlon.csv
+ADD lufthansa_dash.py /files/lufthansa_dash.py
+WORKDIR /files
+EXPOSE 5000
+CMD python3 lufthansa_dash.py
