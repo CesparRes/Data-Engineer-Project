@@ -1,6 +1,20 @@
 # Lufthansa_Project
 The Lufthansa data engineering project for Data Scientest
 
+Use:
+
+To deploy the Dashboard, API and MongoDb download the docker-compose.yml and run "docker-compose up" in the terminal. After some delay and downloading 3 containers will be running. One will be the MongoDb database for the project, one will be the Dash dashboard, one the FastAPI API.
+
+By visiting localhost:8000/docs you will find the API documentation, alternatively you can simply visit localhost:8000/status.
+The dashboard can be found at localhost:5000
+
+While the project includes the python DAG for airflow, the docker compose does not include airflow. To "scrape" the Lufthansa API you may use the new_test.py file with the command "python3 new_test > all_airports.txt" - this will take several minutes while it queries the Lufthansa API, and will output the "all_airports.txt" file which is a list of JSON objects. Next, you'll need to use the command "python3 flatten_data.py". This script changes the list of JSON objects into a single level list of individual JSON objects.
+
+Finally, the command to insert into the MongoDB "mongoimport --db flight_info --collection flights --file airports_parsed.txt --jsonArray"
+
+Ordinarily these would be executed via the DAG - or a cronjob on a daily schedule
+
+
 Business cases
 
 For the 3 major countries: - UK, France, Italy (This already gives us a huge load of Airports)
