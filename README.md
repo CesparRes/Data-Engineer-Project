@@ -38,6 +38,8 @@ main.py - the FastAPI app.
 
 check_request.py - external function used to ensure that the bearer token for the Lufthansa API is valid, returns the valid bearer token. Requests new bearer token if existing is invalid
 
+Additional files:
 addlatlon.py - script used to combine the latitude and longitude to the IATA list in order to be able to use locations for the dashboard map.
-
+IATA_scrape.py - script used to scrape the IATA codes from external website
+GlobalAirportDatabase.csv - file of IATA codes and lat/lon - found later in the project when the lat/lon coords were required.
 
