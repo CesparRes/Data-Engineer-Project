@@ -27,6 +27,8 @@ Using MongDb - update daily but remain within the API limits (5 per second, 1000
 
 Project files:
 
+The primary Dashboard and API files are in the subfolders and are the versions used for the docker containers. 
+
 docker-compose.yml - the docker compose file to deploy the project on other machines via containers
   This docker-compose spins up 2 containers, one for the FastAPI app that queries the database, and the second being the mongo DB containing the flight information.
   Ordinarily, the database would not be within the container itself, but for ease of use with this project the mongodb container also contains all the scraped flights.
