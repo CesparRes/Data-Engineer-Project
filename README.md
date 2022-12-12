@@ -3,17 +3,15 @@ The Lufthansa data engineering project for Data Scientest
 
 Use:
 
-To deploy the Dashboard, API and MongoDb download the docker-compose.yml and run "docker-compose up" in the terminal. After some delay and downloading 3 containers will be running. One will be the MongoDb database for the project, one will be the Dash dashboard, one the FastAPI API.
+The Lufthansa API is first scraped with the "new_test.py" via command "python3 new_test.py > all_airports.txt" - this will then take around 5 minutes to make the API calls and produce the all_airports.txt file. Following this, "python3 flatten_data.py" flattens all the list of JSON objects in the all_airports.txt file into a list of singular (valid) JSON objects. The data is then inserted into the mongoDb database with "mongoimport --db flight_info --collection flights --file airports_parsed.txt --jsonArray".
+
+There are several ways the above could be handled in automation - either via a cronjob running each task sequentially, an airflow DAG running the bash commands for the scripts, or the python scripts as airflow code tasks directly within the DAG . Included in the project files is a DAG file for running them as bash tasks, but as this project does not contain the airflow container these have all been handled manually over multiple days during the project. The cadence for the Lufthansa API scrape in this case is daily, but it could just as easily be setup to be every several hours to lighten the burden of the API calls.
+
+To deploy the Dashboard, API and MongoDb download the included docker-compose.yml and run "docker-compose up" in the terminal. After some delay and downloading 3 containers will be running. One will be the MongoDb database for the project, one will be the Dash dashboard, one the FastAPI API.
 
 By visiting localhost:8000/docs you will find the API documentation, alternatively you can simply visit localhost:8000/status for confirmation that the API is active, however to ensure the MongoDb is accessible you can use the API tests at localhost:8000/docs. (http://localhost:8000/codes should return counts of all flight arrival codes if the MongoDB is available for the API)
 
 The dashboard can be found at localhost:5000. The dashboard will load with global totals for arrival codes at each airport, but you can enter individual dates in the input box on the left (For example 2022-10-29) - upon pressing return the map will update with the new totals.
-
-While the project includes the python DAG for airflow, the docker compose does not include airflow. To "scrape" the Lufthansa API you may use the new_test.py file with the command "python3 new_test > all_airports.txt" - this will take several minutes while it queries the Lufthansa API, and will output the "all_airports.txt" file which is a list of JSON objects. Next, you'll need to use the command "python3 flatten_data.py". This script changes the list of JSON objects into a single level list of individual JSON objects.
-
-Finally, the command to insert into the MongoDB "mongoimport --db flight_info --collection flights --file airports_parsed.txt --jsonArray"
-
-Ordinarily these would be executed via the DAG - or a cronjob on a daily schedule
 
 
 Business cases
