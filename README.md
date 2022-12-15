@@ -82,4 +82,6 @@ flatten_data.py - python script that takes the all_airports.txt file and "flatte
 **addlatlon.py** - script used to combine the latitude and longitude to the IATA list in order to be able to use locations for the dashboard map.
 **IATA_scrape.py** - script used to scrape the IATA codes from external website
 **GlobalAirportDatabase.csv** - file of IATA codes and lat/lon - found later in the project when the lat/lon coords were required.
+**main.py** - local version of the API app for testing (localhost instead of container address)
+**lufthansa_dash.py** - local version of the dashboard app for testing (localhost instead of container address)
 
