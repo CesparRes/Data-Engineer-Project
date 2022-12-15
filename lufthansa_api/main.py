@@ -287,9 +287,6 @@ def status_count(IATA: str):
     else:
         return {"Error": "IATA code is invalid"}
 
-    if len(list(results)) == 0:
-        return {"No arrivals matching search criteria"}
-
     client.close()
     return list(results)
 
@@ -382,9 +379,6 @@ def status_count(country, date):
     ]
     results = flights_db.aggregate(pipeline=pipeline)
     client.close()
-
-    if len(list(results.clone())) == 0:
-        return {"No arrivals matching search criteria"}
 
     return list(results)
 

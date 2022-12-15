@@ -5,4 +5,4 @@ ADD main.py /files/main.py
 ADD iata_codes.csv /files/iata_codes.csv
 WORKDIR /files
 EXPOSE 8000
-CMD uvicorn main:api --host 0.0.0.0 --proxy-headers --reload 
+CMD uvicorn main:api --host 0.0.0.0 --proxy-headers --reload

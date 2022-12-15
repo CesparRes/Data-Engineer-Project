@@ -43,7 +43,7 @@ def flatten(results):
 
 def mongo_connect():
 
-    client = MongoClient(host="Lufthansa_db", port=27017, authSource="admin")
+    client = MongoClient(host="localhost", port=27017, authSource="admin")
 
     db = client.flight_info
     flights = db.flights
@@ -214,6 +214,35 @@ def get_status_codes():
     ]
     results = flights_db.aggregate(pipeline=pipeline)
 
+    client.close()
+    return list(results)
+
+
+@api.get("/codes/all", name="Returns counts for all IATA codes", tags=["Codes"])
+def status_count():
+    """Returns a count of arrival status by all IATA codes"""
+    flights_db, client = mongo_connect()
+
+    pipeline = [
+        {"$match": {"Arrival.AirportCode": {"$in": list(iata_codes["IATA"])}}},
+        {
+            "$group": {
+                "_id": {"IATA": "$Arrival.AirportCode", "Status Code": "$Status.Code"},
+                "count": {"$sum": 1},
+            }
+        },
+        {"$sort": {"_id": 1}},
+        {
+            "$project": {
+                "_id": 0,
+                "IATA": "$_id.IATA",
+                "Status Code": "$_id.Status Code",
+                "count": 1,
+            }
+        },
+    ]
+
+    results = flights_db.aggregate(pipeline=pipeline)
     client.close()
     return list(results)
 
