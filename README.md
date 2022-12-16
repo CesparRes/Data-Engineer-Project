@@ -4,9 +4,10 @@ The Lufthansa data engineering project for Data Scientest
 ## Use:
 
 First create the following folders in your home folder:
-*dags*
-*plugins*
-*logs*
+*dags*  - Airflow Dags folder
+*plugins* - Airflow plugins folder
+*logs* - Airflow logs folder
+*mongo/data* - Persistant MongoDB volume
 
 Then using chmod ensure they have full access (777)
 
@@ -46,7 +47,7 @@ flatten_data.py (Flatten the data)
 db_insert.py (insertion into mongodb)
 These 3 scripts are simply executed as is, and will produce "all_airports.txt" and "airports_parsed.txt" to process themselves.
 
-These will all still work correctly with the docker containers once running
+These will all still work correctly with the docker containers once running, even if airflow fails.
 
 ## Business cases
 
@@ -70,15 +71,16 @@ Ordinarily, the database would not be within the container itself, but for ease 
 
 **check_request.py** - external function used to ensure that the bearer token for the Lufthansa API is valid, returns the valid bearer token. Requests new bearer token if existing is invalid
 
-**main.py** - the FastAPI app. 
+**main.py** - the source code for the FastAPI app. 
 **lufthansa_dash.py** - The source code for the Dash dashboard app
 
 ### Legacy files:
 This folder basically contains old legacy test files and working files from the project
 
 **new_test.py** - the python script that makes the calls to Lufthansa API. This outputs a file (all_airports.txt).
-flatten_data.py - python script that takes the all_airports.txt file and "flattens" it to return just a single list of all individual arrivals. This is because **new_test.py** - returns a list that can contain a list of JSON objects as well as individual JSON objects. Outputs "airports_parsed.txt" file for insertion into mongo DB
+**flatten_data.py** - python script that takes the all_airports.txt file and "flattens" it to return just a single list of all individual arrivals. This is because new_test.py - returns a list that can contain a list of JSON objects as well as individual JSON objects. Outputs "airports_parsed.txt" file for insertion into mongo DB
 
+**IATA_codes.csv** - list of airport IATA codes imported by the scrape script in order to make the requests based on IATA - (only used by new_test.py)
 **addlatlon.py** - script used to combine the latitude and longitude to the IATA list in order to be able to use locations for the dashboard map.
 **IATA_scrape.py** - script used to scrape the IATA codes from external website
 **GlobalAirportDatabase.csv** - file of IATA codes and lat/lon - found later in the project when the lat/lon coords were required.
