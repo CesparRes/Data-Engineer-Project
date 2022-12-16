@@ -73,7 +73,7 @@ Ordinarily, the database would not be within the container itself, but for ease 
 **main.py** - the FastAPI app. 
 **lufthansa_dash.py** - The source code for the Dash dashboard app
 
-**Legacy files:**
+### Legacy files:
 This folder basically contains old legacy test files and working files from the project
 
 **new_test.py** - the python script that makes the calls to Lufthansa API. This outputs a file (all_airports.txt).
