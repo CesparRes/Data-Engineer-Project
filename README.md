@@ -7,7 +7,6 @@ First create the following folders in your home folder:
 *dags*  - Airflow Dags folder
 *plugins* - Airflow plugins folder
 *logs* - Airflow logs folder
-*mongo/data* - Persistant MongoDB volume
 
 Then using chmod ensure they have full access (777)
 
