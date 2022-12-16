@@ -229,7 +229,6 @@ def api_scrape():
         ## if there are no arrivals within a window, we get the resource not found error, so we want to filter these out of the response
         ## we also want to filter out any "error" messages
         if "ResourceNotFound" and "Error" not in response.text:
-            print("response is: ", response.json())
             results.append(response)
 
     print("results is: ", results)
@@ -265,7 +264,7 @@ def flatten_data():
 
     print("flattened data is: ", data_out)
     with open("/tmp/airports_parsed.txt", "w") as f:
-        json.dump(data, f)
+        json.dump(data_out, f)
 
 
 def writetoMongo():
