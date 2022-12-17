@@ -186,6 +186,10 @@ services:
       - cespar_host
     ports:
       - 27017:27017
+    volumes:
+      - type: volume
+        source: mongo_data_volume
+        target: /data/db
 
   fastapi:
     container_name: Lufthansa_api
@@ -211,3 +215,5 @@ networks:
 
 volumes:
   postgres-db-volume:
+  mongo_data_volume:
+    external: true

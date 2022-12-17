@@ -15,8 +15,6 @@ import time
 import asyncio
 from datetime import datetime, timedelta
 
-day_arg = datetime.today() - timedelta(days=1)
-day_arg = day_arg.strftime("/%Y-%m-%dT")
 client = MongoClient(host="Lufthansa_db", port=27017, authSource="admin")
 db = client.flight_info
 flights = db.flights
@@ -105,12 +103,12 @@ def api_scrape():
                 + dtime,
                 headers=headers,
             )
-        time.sleep(0.2)
-        print(
-            "requested with code: {0}, day_arg: {1}, dtime: {2}, bearer:{3}".format(
-                code, day_arg, dtime, headers["authorization"]
+            print(
+                "requested with code: {0}, day_arg: {1}, dtime: {2}, bearer:{3}".format(
+                    code, day_arg, dtime, headers["authorization"]
+                )
             )
-        )
+        time.sleep(0.2)
 
         ## if there are no arrivals within a window, we get the resource not found error, so we want to filter these out of the response
         ## we also want to filter out any "error" messages
