@@ -70,16 +70,18 @@ Ordinarily, the database would not be within the container itself, but for ease 
 
 **Lufthansa_DAG.py** - the python file for automation of the API requests and database insertion. This file needs to be placed in your dags folder once airflow is running.
 
-**check_request.py** - external function used to ensure that the bearer token for the Lufthansa API is valid, returns the valid bearer token. Requests new bearer token if existing is invalid
-
 **main.py** - the source code for the FastAPI app. 
+
 **lufthansa_dash.py** - The source code for the Dash dashboard app
 
 ### Legacy files:
 This folder basically contains old legacy test files and working files from the project
 
 **new_test.py** - the python script that makes the calls to Lufthansa API. This outputs a file (all_airports.txt).
+
 **flatten_data.py** - python script that takes the all_airports.txt file and "flattens" it to return just a single list of all individual arrivals. This is because new_test.py - returns a list that can contain a list of JSON objects as well as individual JSON objects. Outputs "airports_parsed.txt" file for insertion into mongo DB
+
+**check_request.py** - external function used to ensure that the bearer token for the Lufthansa API is valid, returns the valid bearer token. Requests new bearer token if existing is invalid
 
 **IATA_codes.csv** - list of airport IATA codes imported by the scrape script in order to make the requests based on IATA - (only used by new_test.py)
 **addlatlon.py** - script used to combine the latitude and longitude to the IATA list in order to be able to use locations for the dashboard map.
