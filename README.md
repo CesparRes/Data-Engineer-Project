@@ -10,6 +10,8 @@ First create the following folders in your home folder:
 
 Then using chmod ensure they have full access (777)
 
+Next using docker create the volume "mongo_data_volume". This is used to persist the mongoDB for when the containers are shut down.
+
 Once this is done run:
 docker-compose up airflow-init
 
@@ -64,7 +66,7 @@ The primary Dashboard and API files are in the subfolders and are the versions u
 
 **docker-compose.yaml** - the docker compose file to deploy the project on other machines via containers
    This docker-compose spins up multiple containers, one for the FastAPI app that queries the database, one for the Dashboard container displaying flight arrivals visually, and the third being the mongo DB containing the flight information. The rest are containers for the Airflow automation/orchestration of DAG for database insertion
-Ordinarily, the database would not be within the container itself, but for ease of use with this project the mongodb container also contains all the scraped flights.
+Ordinarily, the database would not be within the container itself, but for ease of use with this project the mongodb container also contains all the scraped flights. The database is persisted within the "mongo_data_volume" volume created with docker.
 
 **Lufthansa_DAG.py** - the python file for automation of the API requests and database insertion. This file needs to be placed in your dags folder once airflow is running.
 
